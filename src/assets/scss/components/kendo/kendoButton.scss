@@ -1,0 +1,267 @@
+
+.k-button {
+    --p-button-font-weight: var(--p-font-weight-primary);
+    --p-button-text-color: var(--p-text-color-regular);
+    --kendo-font-size: var(--p-font-size-base);
+    --kendo-color-on-app-surface: var(--p-button-text-color);
+
+    font-weight: var(--p-button-font-weight);
+    transition: color 0s, all 0.3s;
+}
+
+.k-button-sm {
+    --kendo-font-size: var(--p-font-size-small);
+}
+
+.k-button-solid-base {
+    --p-button-bg-color: var(--p-color-info-light-9);
+    --p-button-border-color: var(--p-color-info-light-7);
+    --p-button-hover-text-color: var(--p-color-white);
+    --p-button-hover-bg-color: var(--p-color-info-light-8);
+    --p-button-hover-border-color: var(--p-color-info-light-5);
+    --p-button-active-bg-color: var(--p-color-info-light-7);
+    --p-button-active-border-color: var(--p-color-info-light-3);
+
+    --kendo-color-on-base: var(--p-button-text-color);
+    --kendo-color-base: var(--p-button-bg-color);
+
+    &:active, &.k-active {
+        --kendo-color-base-active: var(--p-button-active-bg-color);
+    }
+
+    &:hover, &.k-hover {
+        --kendo-color-base-hover: var(--p-button-hover-bg-color);
+    }
+}
+
+.k-button-solid {
+    --kendo-color-border: var(--p-button-border-color);
+
+    &:active, &.k-active {
+        --kendo-color-border: var(--p-button-active-border-color);
+    }
+
+    &:hover, &.k-hover {
+        --kendo-color-border: var(--p-button-hover-border-color);
+    }
+
+    &:focus, &.k-focus {
+        box-shadow: unset;
+        --kendo-color-border: var(--p-button-hover-border-color);
+    }
+}
+
+.k-button-solid-primary {
+    --p-button-text-color: var(--p-color-white);
+    --p-button-bg-color: var(--p-color-primary);
+    --p-button-border-color: var(--p-color-primary);
+    --p-button-hover-text-color: var(--p-color-white);
+    --p-button-hover-bg-color: var(--p-color-primary-light-3);
+    --p-button-hover-border-color: var(--p-color-primary-light-3);
+    --p-button-active-bg-color: var(--p-color-primary-dark-2);
+    --p-button-active-border-color: var(--p-color-primary-dark-2);
+
+    --kendo-color-on-primary: var(--p-button-text-color);
+    --kendo-color-primary: var(--p-button-bg-color);
+
+    &:active, &.k-active {
+        --kendo-color-primary-active: var(--p-button-active-bg-color);
+    }
+
+    &:hover, &.k-hover {
+        --kendo-color-primary-hover: var(--p-button-hover-bg-color);
+    }
+}
+
+.k-button-solid-success {
+    --p-button-text-color: var(--p-color-white);
+    --p-button-bg-color: var(--p-color-success);
+    --p-button-border-color: var(--p-color-success);
+    --p-button-hover-link-text-color: var(--p-color-success-light-5);
+    --p-button-hover-bg-color: var(--p-color-success-light-3);
+    --p-button-hover-border-color: var(--p-color-success-light-3);
+    --p-button-active-bg-color: var(--p-color-success-dark-2);
+    --p-button-active-border-color: var(--p-color-success-dark-2);
+
+    --kendo-color-on-success: var(--p-button-text-color);
+    --kendo-color-success: var(--p-button-bg-color);
+
+    &:active, &.k-active {
+        --kendo-color-success-active: var(--p-button-active-bg-color);
+    }
+
+    &:hover, &.k-hover {
+        --kendo-color-success-hover: var(--p-button-hover-bg-color);
+    }
+}
+
+.k-button-solid-warning {
+    --p-button-text-color: var(--p-color-white);
+    --p-button-bg-color: var(--p-color-warning);
+    --p-button-border-color: var(--p-color-warning);
+    --p-button-hover-text-color: var(--p-color-white);
+    --p-button-hover-link-text-color: var(--p-color-warning-light-5);
+    --p-button-hover-bg-color: var(--p-color-warning-light-3);
+    --p-button-hover-border-color: var(--p-color-warning-light-3);
+    --p-button-active-bg-color: var(--p-color-warning-dark-2);
+    --p-button-active-border-color: var(--p-color-warning-dark-2);
+
+    --kendo-color-on-warning: var(--p-button-text-color);
+    --kendo-color-warning: var(--p-button-bg-color);
+
+    &:active, &.k-active {
+        --kendo-color-warning-active: var(--p-button-active-bg-color);
+    }
+
+    &:hover, &.k-hover {
+        --kendo-color-warning-hover: var(--p-button-hover-bg-color);
+    }
+}
+
+.k-button-flat {
+    color: var(--p-button-text-color) !important;
+    background-color: var(--p-button-bg-color) !important;
+    // border-color: var(--p-button-border-color) !important;
+
+    &::before, &::after {
+        content: unset;
+    }
+
+    &:active, &.k-active {
+        --p-button-border-color: var(--p-button-active-border-color);
+        background-color: var(--p-button-active-bg-color) !important;
+    }
+
+    &:hover, &.k-hover {
+        --p-button-border-color: var(--p-button-hover-border-color);
+        --p-button-bg-color: var(--p-button-hover-bg-color);
+    }
+}
+
+.k-button-flat-base {
+    --p-button-border-color: var(--p-color-info-light-5);
+    --p-button-bg-color: var(--p-fill-color-blank);
+    --p-button-text-color: var(--p-text-color-regular);
+    --p-button-active-bg-color:var(--p-color-info-light-8);
+    --p-button-hover-border-color: var(--p-color-info);
+    --p-button-hover-bg-color: var(--p-color-info-light-9);
+}
+
+.k-button-flat-primary {
+    --p-button-border-color: var(--p-color-primary-light-5);
+    --p-button-bg-color: var(--p-fill-color-blank);
+    --p-button-text-color: var(--p-color-primary);
+    --p-button-active-bg-color:var(--p-color-primary-light-8);
+    --p-button-hover-border-color: var(--p-color-primary);
+    --p-button-hover-bg-color: var(--p-color-primary-light-9);
+}
+
+.k-button-flat-success {
+    --p-button-border-color: var(--p-color-success-light-5);
+    --p-button-bg-color: var(--p-fill-color-blank);
+    --p-button-text-color: var(--p-color-success);
+    --p-button-active-bg-color:var(--p-color-success-light-8);
+    --p-button-hover-border-color: var(--p-color-success);
+    --p-button-hover-bg-color: var(--p-color-success-light-9);
+}
+
+.k-button-flat-warning {
+    --p-button-border-color: var(--p-color-warning-light-5);
+    --p-button-bg-color: var(--p-fill-color-blank);
+    --p-button-text-color: var(--p-color-warning);
+    --p-button-active-bg-color:var(--p-color-warning-light-8);
+    --p-button-hover-border-color: var(--p-color-warning);
+    --p-button-hover-bg-color: var(--p-color-warning-light-9);
+}
+
+.k-button-flat-error {
+    --p-button-border-color: var(--p-color-error-light-5);
+    --p-button-bg-color: var(--p-fill-color-blank);
+    --p-button-text-color: var(--p-color-error);
+    --p-button-active-bg-color:var(--p-color-error-light-8);
+    --p-button-hover-border-color: var(--p-color-error);
+    --p-button-hover-bg-color: var(--p-color-error-light-9);
+}
+
+
+.k-button-outline {
+    &:focus, &.k-focus {
+        box-shadow: unset;
+    }
+}
+
+.k-button-outline-base {
+
+    border-color: var(--p-color-info-light-7);
+
+    &:hover {
+        --kendo-color-on-base: var(--p-color-info-light-9);
+        --kendo-color-base: var(--p-text-color-regular);
+    }
+
+     &:active, &.k-active {
+        --kendo-color-base: var(--p-color-info-light-7);
+    }
+}
+
+.k-button-outline-primary {
+    --kendo-color-primary-on-surface: var(--p-color-primary);
+
+     &:active, &.k-active {
+        --kendo-color-primary: var(--p-color-primary-dark-2);
+    }
+}
+
+.k-button-outline-success {
+    --kendo-color-success-on-surface: var(--p-color-success);
+
+    &:active, &.k-active {
+        --kendo-color-success: var(--p-color-success-dark-2);
+    }
+}
+
+.k-button-outline-warning {
+    --kendo-color-warning-on-surface: var(--p-color-warning);
+
+    &:active, &.k-active {
+        --kendo-color-warning: var(--p-color-warning-dark-2);
+    }
+}
+
+.k-button-outline-error {
+    --kendo-color-error-on-surface: var(--p-color-error);
+
+    &:active, &.k-active {
+        --kendo-color-error: var(--p-color-error-dark-2);
+    }
+}
+
+.k-button-link {
+    &.with-underline .k-button-text {
+        text-decoration-color: inherit;
+
+        &:hover {
+            text-decoration-color: transparent;
+        }
+    }
+
+    &:hover {
+        text-decoration: none;
+
+        .k-button-text {
+            text-decoration-color: inherit;
+        }
+    }
+
+
+    &:focus, &.k-focus {
+        box-shadow: unset;
+    }
+
+    .k-button-text {
+        text-decoration: underline transparent;
+        transition: text-decoration-color .15s ease;
+        text-decoration-thickness: 0.0625rem;
+        text-underline-offset: 0.4em;
+    }
+}

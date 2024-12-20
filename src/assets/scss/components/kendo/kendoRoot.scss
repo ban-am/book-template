@@ -1,0 +1,24 @@
+:root {
+    --kendo-color-primary: var(--p-color-primary);
+    --kendo-color-primary-hover: var(--p-color-primary-light-3);
+    --kendo-color-primary-active: var(--p-color-primary-dark-2);
+    --kendo-color-primary-emphasis: var(--p-color-primary-light-9);
+
+    // --kendo-color-primary-subtle: #d0e3ee;
+    // --kendo-color-primary-subtle-hover: #accee2;
+    // --kendo-color-primary-subtle-active: #89bad6;
+    // --kendo-color-primary: var(--p-color-primary);
+    // --kendo-color-primary-hover: var(--p-color-primary-light-3);
+    // --kendo-color-primary-active: var(--p-color-primary-dark-2);
+    // --kendo-color-primary-emphasis: var(--p-color-primary-light-9);
+    // --kendo-color-primary-on-subtle: #06293c;
+    // --kendo-color-on-primary: white;
+    // --kendo-color-primary-on-surface: #0e5781;
+
+    --kendo-color-success: var(--p-color-success);
+    --kendo-color-success-hover: var(--p-color-success-light-5);
+    --kendo-color-warning: var(--p-color-warning);
+    --kendo-color-warning-hover: var(--p-color-warning-light-5);
+    --kendo-color-error: var(--p-color-error);
+    --kendo-color-error-hover: var(--p-color-error-light-5);
+}

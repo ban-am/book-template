@@ -1,0 +1,44 @@
+.library {
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  position: relative;
+}
+
+.library__container {
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+  height: 100%;
+}
+
+.file-tree {
+  font-size: 12px;
+
+  li:nth-child(even) > .file-tree__item {
+    background-color: var(--p-bg-sec);
+  }
+}
+
+.file-tree__item {
+  display: flex;
+}
+
+.file-preview {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  
+  background-color: var(--p-color-white);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.file-preview__container {
+  border-top: 1px solid var(--p-border-color);
+  padding: 1rem;
+  display: flex;
+}
+
+.file-preview__header {
+ 
+}

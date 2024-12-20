@@ -1,0 +1,18 @@
+.k-input {
+    &::placeholder {
+        color: var(--p-text-color-placeholder);
+    }
+}
+
+.k-input-sm {
+    --kendo-font-size: var(--p-font-size-small);
+}
+
+.k-input-solid {
+    --kendo-color-surface-alt: var(--p-fill-color-lighter);
+}
+
+
+.k-list-container.k-popup.k-child-animation-container {
+    transition-duration: 150ms !important;
+}

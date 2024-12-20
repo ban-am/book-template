@@ -1,0 +1,26 @@
+
+@use 'components/kendo';
+@use 'components/kendo/kendoRoot';
+@use 'components/kendo/kendoButton';
+@use 'components/kendo/kendoInput';
+@use 'components/scrollbar';
+@use 'components/root';
+@use 'components/normalize';
+@use 'components/notification';
+@use 'components/base';
+
+@use 'components/ui/navigation';
+@use 'components/ui/scrollable';
+@use 'components/ui/sidebar';
+@use 'components/ui/library';
+
+@import "@progress/kendo-font-icons/dist/index.css";
+
+
+.middle {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
