@@ -1,0 +1,28 @@
+
+.sidebar {
+    height: calc(100vh);
+    min-width: var(--vp-sidebar-width-small);
+    max-width: var(--vp-sidebar-width-small);
+    overflow-y: auto;
+    transition: background-color var(--p-transition-duration-fast), opacity .25s, transform .5s cubic-bezier(.19,1,.22,1);
+}
+
+.sidebar-wrapper {
+  padding: 20px;
+}
+
+.sidebar-menu .nav-link-item {
+    display: block;
+    padding: 10px;
+    border-radius: var(--p-border-radius-base);
+    font-size: 13px;
+
+    &:hover {
+      color: var(--brand-color);
+    }
+
+    &.router-link-active {
+      color: var(--brand-color);
+      background-color: var(--link-active-bg-color);
+    }
+}
