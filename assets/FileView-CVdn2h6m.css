@@ -1,0 +1,1 @@
+.content-width{--content-width: calc(100vw - 2rem - var(--vp-sidebar-width-small));width:var(--content-width)}.footer-pagination{width:calc(var(--content-width) - 8rem)}.k-button-active{background-color:var(--p-color-primary);color:#fff}
