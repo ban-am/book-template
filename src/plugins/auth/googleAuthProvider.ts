@@ -58,7 +58,7 @@ export default class GoogleAuthProvider {
     }
 
     // Parse the hash fragment into key-value pairs
-    const params = new URLSearchParams(hash.substring(1)); // Remove the leading #
+    const params = new URLSearchParams(hash.substring(2)); // Remove the leading #
 
     // Extract the access token and expiration time
     const accessToken = params.get("access_token");
@@ -77,6 +77,8 @@ export default class GoogleAuthProvider {
     };
 
     localStorage.setItem(AUTH_DATA_KEY, JSON.stringify(this.auth_data));
+
+    window.location.replace(window.location.href.split("#")[0]);
   }
 
   async getAuthData(params: any, client_secret: string) {

@@ -33,6 +33,12 @@ onBeforeMount(() => {
 watch(() => route.params.id, () => {
   getOrAddContentInfo();
   render();
+
+  if (iframeRef){
+    iframeRef.contentWindow!.document.open();
+    iframeRef.contentWindow!.document.write('');
+    iframeRef.contentWindow!.document.close();
+  }
 });
 
 const onClose = () => {

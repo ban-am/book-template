@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import MainLayout from '@/components/layouts/MainLayout.vue'
 import { useGoogleAuth } from '@/plugins/auth';
 import BlankLayout from '@/components/layouts/BlankLayout.vue';
@@ -56,7 +56,7 @@ const AuthRoutes: RouteRecordRaw = {
 }
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/:pathMatch(.*)*',
@@ -71,6 +71,7 @@ router.beforeEach(async (to, from, next) => {
   const authProvider = useGoogleAuth()
   const isLogedIn = await authProvider.isLogedIn();
 
+  console.log('isLogedIn', isLogedIn, to.path);
   if ('/auth/login' == to.path){
     if (isLogedIn)
       return next({ name: 'library' });
