@@ -8,7 +8,7 @@ import basicSsl from '@vitejs/plugin-basic-ssl'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/book-template/',
+  base: '/book-template',
   css: {
     preprocessorOptions: {
       scss: {

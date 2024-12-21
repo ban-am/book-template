@@ -1,15 +1,27 @@
 <script setup lang="ts">
 import { useGoogleAuth } from '@/plugins/auth';
-import { useRoute, useRouter } from 'vue-router';
+import { useRouter } from 'vue-router';
 
 const authProvider = useGoogleAuth();
 const router = useRouter();
 
-const signIn = async () => {
+const redirectSignIn = async () => {
   if (!authProvider.client_secret.value)
     return;
 
-  await authProvider.signIn(authProvider.client_secret.value);
+  await authProvider.redirectSignIn(authProvider.client_secret.value);
+
+  if (authProvider.auth_data) {
+    await router.push({ name: 'library' });
+  }
+};
+
+
+const popUpSignIn = async () => {
+  if (!authProvider.client_secret.value)
+    return;
+
+  await authProvider.popUpSignIn(authProvider.client_secret.value);
 
   if (authProvider.auth_data) {
     await router.push({ name: 'library' });
@@ -29,9 +41,16 @@ const signIn = async () => {
           <input class="k-input k-input-md k-input-solid k-rounded-md" v-model="authProvider.client_secret.value" />
         </fieldset>
 
-        <button type="button" class="k-button k-button-md k-rounded-md k-button-outline k-button-outline-primary" 
-          @click="signIn">
-          Sign In
+        <button type="button" class="k-button k-button-md k-rounded-md k-button-outline k-button-outline-primary"
+          :disabled="!authProvider.client_secret.value"
+          @click="redirectSignIn">
+          Redirect Sign In
+        </button>
+
+        <button type="button" class="k-button k-button-md k-rounded-md k-button-outline k-button-outline-primary"
+          :disabled="!authProvider.client_secret.value"
+          @click="popUpSignIn">
+          Pop up sign In
         </button>
       </div>
     </div>
