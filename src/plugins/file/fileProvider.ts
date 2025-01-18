@@ -153,6 +153,7 @@ export default class FileProvider {
         return blob;
 
       case 'text/html':
+      case "text/plain":
         return blob.text();
     }
   }
@@ -181,6 +182,10 @@ export default class FileProvider {
 
         case 'text/html':
           iframeData = replaceRelativePath(data);
+          break;
+
+        case "text/plain":
+          iframeData = "<pre>" + data + "</pre>";
           break;
 
         default:
